@@ -7,10 +7,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class ChapterOne {
 
@@ -31,7 +33,7 @@ public class ChapterOne {
     }
 
     @Given("user is on homepage")
-    public void user_is_on_homepage() {
+    public void launchURL() {
         driver.get("http://book.theautomatedtester.co.uk");
         System.out.println("The url is launched");
     }
@@ -50,5 +52,23 @@ public class ChapterOne {
     @After
     public void teardown() {
         driver.close();
+    }
+
+    @Given("^user is on Chapter One page$")
+    public void navigateToChapter1Page() throws InterruptedException {
+        launchURL();
+        clickChapterOneLink();
+        System.out.println("User navigated to Chapter 1 page");
+    }
+
+    @When("^the user selects the \"([^\"]*)\" value from dropdown$")
+    public void dropdownOptionSelection(String dropdownOption) {
+        Select select = new Select(driver.findElement(By.id("selecttype")));
+        select.selectByVisibleText(dropdownOption);
+    }
+
+    @Then(("the desired value should be selected and displayed"))
+    public void verifySelectedDropdownValue() {
+        System.out.println("The dropdown selected");
     }
 }

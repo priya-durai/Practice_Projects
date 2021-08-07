@@ -14,7 +14,7 @@ Feature: Chapter One Functionalities
   Scenario Outline: Select Selenium option from dropdown
 
     Given user is on Chapter One page
-    When the user selects the value from dropdown
+    When the user selects the "<DropdownOption>" value from dropdown
     Then the desired value should be selected and displayed
 
     Examples:
