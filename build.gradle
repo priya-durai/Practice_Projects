@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'Cucumber'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '6.9.1'
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '6.9.1'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.6.3'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.6.3'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    // https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting
+    implementation group: 'net.masterthought', name: 'cucumber-reporting', version: '5.4.0'
+}

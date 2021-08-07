@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Chapter One Functionalities" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-07T12:52:12" hostname="Bala.local" time="5.229">
+  <properties/>
+  <testcase name="Verify Chapter One link" classname="Chapter One Functionalities" time="5.229"/>
+  <system-out><![CDATA[
+@LoginTest
+Scenario: Verify Chapter One link                ?[90m# src/test/resources/Features/chapter1.feature:7?[0m
+The url is launched
+  ?[32mGiven ?[0m?[32muser is on homepage?[0m                      ?[90m# StepDefinitions.ChapterOne.user_is_on_homepage()?[0m
+  ?[32mWhen ?[0m?[32mthe user clicks on the Chapter1 link?[0m      ?[90m# StepDefinitions.ChapterOne.clickChapterOneLink()?[0m
+  ?[32mThen ?[0m?[32mthe user is navigated to Chapter one page?[0m ?[90m# StepDefinitions.ChapterOne.verifyChapterOnePage()?[0m
+]]></system-out>
+  <system-err><![CDATA[Starting MSEdgeDriver 92.0.902.67 (eda2f229828b8182304335674621190ceba97ecd) on port 13054
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping MSEdgeDriver safe.
+MSEdgeDriver was started successfully.
+Aug 07, 2021 6:22:14 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
